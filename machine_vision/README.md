@@ -1,2 +1,2 @@
-# QingP_Pro
+# machine vision
 this is machine vision project
