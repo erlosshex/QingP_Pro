@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.33214.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QingP_MachineVision", "QingP_MachineVision\QingP_MachineVision.vcxproj", "{E479FD86-764A-4796-A7E0-8D3B0CBE6BDD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm_operator", "algorithm_operator\algorithm_operator.vcxproj", "{7FC31A0D-89DF-4513-A4A6-52584A488794}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm_kit", "algorithm_kit\algorithm_kit.vcxproj", "{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_module", "test_module\test_module.vcxproj", "{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_module", "example_module\example_module.vcxproj", "{3812C273-B39C-4F5E-9979-3C30400E82B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +23,22 @@ Global
 		{E479FD86-764A-4796-A7E0-8D3B0CBE6BDD}.Debug|x64.Build.0 = Debug|x64
 		{E479FD86-764A-4796-A7E0-8D3B0CBE6BDD}.Release|x64.ActiveCfg = Release|x64
 		{E479FD86-764A-4796-A7E0-8D3B0CBE6BDD}.Release|x64.Build.0 = Release|x64
+		{7FC31A0D-89DF-4513-A4A6-52584A488794}.Debug|x64.ActiveCfg = Debug|x64
+		{7FC31A0D-89DF-4513-A4A6-52584A488794}.Debug|x64.Build.0 = Debug|x64
+		{7FC31A0D-89DF-4513-A4A6-52584A488794}.Release|x64.ActiveCfg = Release|x64
+		{7FC31A0D-89DF-4513-A4A6-52584A488794}.Release|x64.Build.0 = Release|x64
+		{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}.Debug|x64.ActiveCfg = Debug|x64
+		{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}.Debug|x64.Build.0 = Debug|x64
+		{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}.Release|x64.ActiveCfg = Release|x64
+		{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}.Release|x64.Build.0 = Release|x64
+		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Debug|x64.ActiveCfg = Debug|x64
+		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Debug|x64.Build.0 = Debug|x64
+		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Release|x64.ActiveCfg = Release|x64
+		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Release|x64.Build.0 = Release|x64
+		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Debug|x64.ActiveCfg = Debug|x64
+		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Debug|x64.Build.0 = Debug|x64
+		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Release|x64.ActiveCfg = Release|x64
+		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
