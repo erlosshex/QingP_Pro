@@ -1,0 +1,6 @@
+#ifndef CAMERA_COMMON_STRUCT
+#define CAMERA_COMMON_STRUCT
+
+
+
+#endif

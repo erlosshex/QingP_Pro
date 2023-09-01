@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}</ProjectGuid>
+    <ProjectGuid>{46B4F776-019E-4185-8AA3-CB7F9306FF19}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
@@ -19,11 +19,11 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -64,9 +64,10 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CAMERA_CAPTURE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -76,19 +77,29 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>CAMERA_CAPTURE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\camera_capture\camera_capture.vcxproj">
-      <Project>{46b4f776-019e-4185-8aa3-cb7f9306ff19}</Project>
-    </ProjectReference>
+    <ClCompile Include="source\camera_class\CameraMultiFilesOpenCV\CameraMultiFilesOpenCV.cpp" />
+    <ClCompile Include="source\camera_class\CameraSingleFileOpenCV\CameraSingleFileOpenCV.cpp" />
+    <ClCompile Include="source\camera_class\camera_base.cpp" />
+    <ClCompile Include="source\camera_manager\camera_manager_base.cpp" />
+    <ClCompile Include="source\camera_manager\normal\CameraManagerNormal.cpp" />
+    <ClInclude Include="camera_capture_global.h" />
+    <QtMoc Include="source\camera_manager\normal\CameraManagerNormal.h" />
+    <QtMoc Include="source\camera_class\CameraMultiFilesOpenCV\CameraMultiFilesOpenCV.h" />
+    <QtMoc Include="source\camera_class\CameraSingleFileOpenCV\CameraSingleFileOpenCV.h" />
+    <QtMoc Include="source\camera_class\camera_base.h" />
+    <ClInclude Include="source\camera_common\camera_common_enum.h" />
+    <ClInclude Include="source\camera_common\camera_common_struct.h" />
+    <QtMoc Include="source\camera_manager\camera_manager_base.h" />
+    <QtMoc Include="camera_capture.h" />
+    <ClCompile Include="camera_capture.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
