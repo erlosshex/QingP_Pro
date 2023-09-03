@@ -1,7 +1,7 @@
 #ifndef CAMERA_COMMON_ENUM
 #define CAMERA_COMMON_ENUM
 
-namespace CameraCommon
+namespace CameraCommonEnum
 {
 	enum class CameraCaptureType
 	{
@@ -14,6 +14,15 @@ namespace CameraCommon
 
 		DefaultMode = 0xFFFF,
 	};
+
+	enum class CameraFrameType
+	{
+		OpenCVMatType = 0x0,
+		HalconHObjectType = 0x1,
+
+		DefaultMode = 0xFFFF,
+	};
+
 }
 
 #endif

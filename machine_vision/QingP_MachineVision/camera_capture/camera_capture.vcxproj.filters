@@ -56,6 +56,9 @@
     <ClInclude Include="source\camera_common\camera_common_struct.h">
       <Filter>Source Files\camera_common</Filter>
     </ClInclude>
+    <ClInclude Include="source\camera_common\camera_common_define.h">
+      <Filter>Source Files\camera_common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\camera_class\camera_base.cpp">

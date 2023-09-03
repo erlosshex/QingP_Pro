@@ -1,6 +1,7 @@
 #include "CameraMultiFilesOpenCV.h"
 
-CameraMultiFilesOpenCV::CameraMultiFilesOpenCV()
+CameraMultiFilesOpenCV::CameraMultiFilesOpenCV(CameraCommonEnum::CameraCaptureType eCaptureType, CameraCommonEnum::CameraFrameType eImageType) : \
+	CameraBase(eCaptureType, eImageType)
 {
 
 }

@@ -15,6 +15,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_module", "example_m
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "camera_capture", "camera_capture\camera_capture.vcxproj", "{46B4F776-019E-4185-8AA3-CB7F9306FF19}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common_tool", "common_tool\common_tool.vcxproj", "{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "small_tool", "small_tool", "{FC99609E-616B-4FF4-B2D3-8D14088A6252}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -45,6 +49,10 @@ Global
 		{46B4F776-019E-4185-8AA3-CB7F9306FF19}.Debug|x64.Build.0 = Debug|x64
 		{46B4F776-019E-4185-8AA3-CB7F9306FF19}.Release|x64.ActiveCfg = Release|x64
 		{46B4F776-019E-4185-8AA3-CB7F9306FF19}.Release|x64.Build.0 = Release|x64
+		{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}.Debug|x64.ActiveCfg = Debug|x64
+		{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}.Debug|x64.Build.0 = Debug|x64
+		{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}.Release|x64.ActiveCfg = Release|x64
+		{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

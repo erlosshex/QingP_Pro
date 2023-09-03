@@ -1,6 +1,7 @@
 #include "CameraSingleFileOpenCV.h"
 
-CameraSingleFileOpenCV::CameraSingleFileOpenCV()
+CameraSingleFileOpenCV::CameraSingleFileOpenCV(CameraCommonEnum::CameraCaptureType eCaptureType, CameraCommonEnum::CameraFrameType eImageType) : \
+	CameraBase(eCaptureType, eImageType)
 {
 
 }

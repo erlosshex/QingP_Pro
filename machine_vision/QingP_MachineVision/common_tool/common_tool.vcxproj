@@ -11,11 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{46B4F776-019E-4185-8AA3-CB7F9306FF19}</ProjectGuid>
+    <ProjectGuid>{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
-    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')"
+      >$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -40,22 +41,21 @@
     <QtModules>core</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
-  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
-    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  <Target Name="QtMsBuildNotFound"
+    BeforeTargets="CustomBuild;ClCompile"
+    Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High"
+      Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
   </Target>
   <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(QtMsBuild)\Qt.props" />
-    <Import Project="..\third_party\props\opencv470_D.props" />
-    <Import Project="..\third_party\props\halcon_xl_env.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(QtMsBuild)\Qt.props" />
-    <Import Project="..\third_party\props\opencv470_R.props" />
-    <Import Project="..\third_party\props\halcon_xl_env.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
@@ -68,7 +68,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>CAMERA_CAPTURE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COMMON_TOOL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,7 +81,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>CAMERA_CAPTURE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COMMON_TOOL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -89,27 +89,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source\camera_class\CameraMultiFilesOpenCV\CameraMultiFilesOpenCV.cpp" />
-    <ClCompile Include="source\camera_class\CameraSingleFileOpenCV\CameraSingleFileOpenCV.cpp" />
-    <ClCompile Include="source\camera_class\camera_base.cpp" />
-    <ClCompile Include="source\camera_manager\camera_manager_base.cpp" />
-    <ClCompile Include="source\camera_manager\normal\CameraManagerNormal.cpp" />
-    <ClInclude Include="camera_capture_global.h" />
-    <QtMoc Include="source\camera_manager\normal\CameraManagerNormal.h" />
-    <QtMoc Include="source\camera_class\CameraMultiFilesOpenCV\CameraMultiFilesOpenCV.h" />
-    <QtMoc Include="source\camera_class\CameraSingleFileOpenCV\CameraSingleFileOpenCV.h" />
-    <QtMoc Include="source\camera_class\camera_base.h" />
-    <ClInclude Include="source\camera_common\camera_common_define.h" />
-    <ClInclude Include="source\camera_common\camera_common_enum.h" />
-    <ClInclude Include="source\camera_common\camera_common_struct.h" />
-    <QtMoc Include="source\camera_manager\camera_manager_base.h" />
-    <QtMoc Include="camera_capture.h" />
-    <ClCompile Include="camera_capture.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\common_tool\common_tool.vcxproj">
-      <Project>{60fdbb3b-43a0-4dc7-bfb8-044ffc19dda3}</Project>
-    </ProjectReference>
+    <ClInclude Include="common_tool_global.h"/>
+    <QtMoc Include="common_tool.h"/>
+    <ClCompile Include="common_tool.cpp"/>
+
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

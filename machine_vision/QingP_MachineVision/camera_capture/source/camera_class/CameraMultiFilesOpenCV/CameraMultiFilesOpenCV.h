@@ -9,7 +9,7 @@ class CAMERA_CAPTURE_EXPORT CameraMultiFilesOpenCV : public CameraBase
 {
     Q_OBJECT
 public:
-    CameraMultiFilesOpenCV();
+    CameraMultiFilesOpenCV(CameraCommonEnum::CameraCaptureType eCaptureType, CameraCommonEnum::CameraFrameType eImageType);
     ~CameraMultiFilesOpenCV();
 };
 

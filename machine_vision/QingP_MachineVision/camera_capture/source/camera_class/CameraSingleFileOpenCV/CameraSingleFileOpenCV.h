@@ -9,7 +9,7 @@ class CAMERA_CAPTURE_EXPORT CameraSingleFileOpenCV : public CameraBase
 {
     Q_OBJECT
 public:
-    CameraSingleFileOpenCV();
+    CameraSingleFileOpenCV(CameraCommonEnum::CameraCaptureType eCaptureType, CameraCommonEnum::CameraFrameType eImageType);
     ~CameraSingleFileOpenCV();
 };
 
