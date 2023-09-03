@@ -21,6 +21,9 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Source Files\file_operator">
+      <UniqueIdentifier>{acd1c82d-ea2f-4275-ae49-659b30bb71ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_tool_global.h">
@@ -32,6 +35,13 @@
     <ClCompile Include="common_tool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
+    <ClInclude Include="source\file_operator\FileOperator.h">
+      <Filter>Source Files\file_operator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\file_operator\FileOperator.cpp">
+      <Filter>Source Files\file_operator</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
