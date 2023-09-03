@@ -87,7 +87,10 @@
   <ItemGroup>
     <ClCompile Include="source\file_operator\FileOperator.cpp" />
     <ClInclude Include="common_tool_global.h" />
-    <ClInclude Include="source\file_operator\FileOperator.h" />
+    <QtMoc Include="source\file_operator\FileOperator.h" />
+    <ClInclude Include="source\tool_common\tool_common_define.h" />
+    <ClInclude Include="source\tool_common\tool_common_enum.h" />
+    <ClInclude Include="source\tool_common\tool_common_struct.h" />
     <QtMoc Include="common_tool.h" />
     <ClCompile Include="common_tool.cpp" />
   </ItemGroup>

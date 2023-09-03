@@ -5,6 +5,7 @@
 
 #include <QObject>
 
+#include "../camera_common/camera_common_define.h"
 #include "../camera_common/camera_common_enum.h"
 #include "../camera_common/camera_common_struct.h"
 
@@ -34,7 +35,7 @@ public:
     /// <returns>返回初始化状态</returns>
     virtual uint getCaptureImage(CameraCommonStruct::CameraCaptureFrame& stCaptureImage);
 
-private:
+protected:
     CameraCommonEnum::CameraCaptureType m_eCaptureType = CameraCommonEnum::CameraCaptureType::DefaultMode;
     CameraCommonEnum::CameraFrameType m_eCaptureImageType = CameraCommonEnum::CameraFrameType::DefaultMode;
 };

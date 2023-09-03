@@ -24,6 +24,9 @@
     <Filter Include="Source Files\file_operator">
       <UniqueIdentifier>{acd1c82d-ea2f-4275-ae49-659b30bb71ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\tool_common">
+      <UniqueIdentifier>{3800fcd6-3142-4f2b-aa25-34e5496f55c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_tool_global.h">
@@ -35,13 +38,24 @@
     <ClCompile Include="common_tool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClInclude Include="source\file_operator\FileOperator.h">
-      <Filter>Source Files\file_operator</Filter>
+    <ClInclude Include="source\tool_common\tool_common_define.h">
+      <Filter>Source Files\tool_common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\tool_common\tool_common_enum.h">
+      <Filter>Source Files\tool_common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\tool_common\tool_common_struct.h">
+      <Filter>Source Files\tool_common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\file_operator\FileOperator.cpp">
       <Filter>Source Files\file_operator</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="source\file_operator\FileOperator.h">
+      <Filter>Source Files\file_operator</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
