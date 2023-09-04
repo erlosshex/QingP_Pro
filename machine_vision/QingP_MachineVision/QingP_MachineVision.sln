@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common_tool", "common_tool\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "small_tool", "small_tool", "{FC99609E-616B-4FF4-B2D3-8D14088A6252}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "combine_capture", "combine_capture\combine_capture.vcxproj", "{41417314-72D0-4C30-935C-D2F1D6427F0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -53,6 +55,10 @@ Global
 		{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}.Debug|x64.Build.0 = Debug|x64
 		{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}.Release|x64.ActiveCfg = Release|x64
 		{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}.Release|x64.Build.0 = Release|x64
+		{41417314-72D0-4C30-935C-D2F1D6427F0B}.Debug|x64.ActiveCfg = Debug|x64
+		{41417314-72D0-4C30-935C-D2F1D6427F0B}.Debug|x64.Build.0 = Debug|x64
+		{41417314-72D0-4C30-935C-D2F1D6427F0B}.Release|x64.ActiveCfg = Release|x64
+		{41417314-72D0-4C30-935C-D2F1D6427F0B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
