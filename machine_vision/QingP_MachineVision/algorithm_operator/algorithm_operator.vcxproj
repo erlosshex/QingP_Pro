@@ -95,6 +95,11 @@
     <QtMoc Include="algorithm_operator.h" />
     <ClCompile Include="algorithm_operator.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common_tool\common_tool.vcxproj">
+      <Project>{60fdbb3b-43a0-4dc7-bfb8-044ffc19dda3}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />

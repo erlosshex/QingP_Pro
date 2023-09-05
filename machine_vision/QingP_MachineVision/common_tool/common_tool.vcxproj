@@ -89,11 +89,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\common_judge\CommonJudge.cpp" />
+    <ClCompile Include="source\common_transform\CommonTransform.cpp" />
     <ClCompile Include="source\convert_image\ConvertImage.cpp" />
     <ClCompile Include="source\file_operator\FileOperator.cpp" />
+    <ClCompile Include="source\normal_tool\NormalTool.cpp" />
     <ClInclude Include="common_tool_global.h" />
     <QtMoc Include="source\file_operator\FileOperator.h" />
     <QtMoc Include="source\convert_image\ConvertImage.h" />
+    <QtMoc Include="source\common_transform\CommonTransform.h" />
+    <QtMoc Include="source\common_judge\CommonJudge.h" />
+    <QtMoc Include="source\normal_tool\NormalTool.h" />
     <ClInclude Include="source\tool_common\tool_common_define.h" />
     <ClInclude Include="source\tool_common\tool_common_enum.h" />
     <ClInclude Include="source\tool_common\tool_common_struct.h" />

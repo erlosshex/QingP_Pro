@@ -1,13 +1,16 @@
-#ifndef ALGORITHM_OPERATOR_COMMON_BLOB_INSPECT_H
+ï»¿#ifndef ALGORITHM_OPERATOR_COMMON_BLOB_INSPECT_H
 #define ALGORITHM_OPERATOR_COMMON_BLOB_INSPECT_H
 
 #include "../../algorithm_operator_global.h"
 
 #include <QObject>
-#include <QVector>
+#include <QList>
 
 #include <opencv2/opencv.hpp>
 #include <halconcpp/HalconCpp.h>
+
+#include "../../../common_tool/source/common_transform/CommonTransform.h"
+#include "../../../common_tool/source/normal_tool/NormalTool.h"
 
 class ALGORITHM_OPERATOR_EXPORT CommonBlobInspect : public QObject
 {
@@ -25,6 +28,12 @@ public:
         double dWidthMin = 0;
         double dHeightMin = 0;
 
+        bool bIsWidthHeightOr = true;
+
+        bool bIsFilterSmallArea = false;
+        double dFilterBlobArea = 3;
+
+        bool bIsEntireBlob = false;
         bool bNeedContour = false;
 
         HalconCpp::HObject hoBlobRegion;
@@ -39,21 +48,20 @@ public:
             double dBlobHeight = 0;
 
             cv::RotatedRect cvrrBlobRrect;
-            cv::Rect cvrBlobRect;
-            std::vector<cv::Point2d> veccvpContour;
+            std::vector<cv::Point> veccvpiContour;
         };
 
         bool bIsDetectOK = false;
-        QVector<OneBlobResult> qvecstBlobResult;
+        QList<OneBlobResult> lststBlobResult;
     };
 
     FindBlobParam m_stParam;
 
     /// <summary>
-    /// ²éÕÒBlobĞÅÏ¢
+    /// æŸ¥æ‰¾Blobä¿¡æ¯
     /// </summary>
-    /// <param name="hoImage">²éÕÒµÄÍ¼Ïñ£¬Halcon</param>
-    /// <param name="stResult">·µ»Ø²éÕÒµÄBlob½á¹ûĞÅÏ¢</param>
+    /// <param name="hoImage">æŸ¥æ‰¾çš„å›¾åƒï¼ŒHalcon</param>
+    /// <param name="stResult">è¿”å›æŸ¥æ‰¾çš„Blobç»“æœä¿¡æ¯</param>
     void findBlob(HalconCpp::HObject hoImage, FindBlobResult& stResult);
 
 };

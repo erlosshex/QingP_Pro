@@ -5,7 +5,7 @@
 
 #include <QObject>
 #include <QMap>
-#include <QVector>
+#include <QList>
 
 #include <opencv2/opencv.hpp>
 
@@ -36,9 +36,9 @@ public:
     /// <summary>
     /// 整合多张图像
     /// </summary>
-    /// <param name="qveccvmImage">多张图像的Vector</param>
+    /// <param name="lstcvmImage">多张图像的List</param>
     /// <returns>返回值，整合后的图像</returns>
-    cv::Mat transform(const QVector<cv::Mat>& qveccvmImage);
+    cv::Mat transform(const QList<cv::Mat>& lstcvmImage);
 
     /// <summary>
     /// 拉伸一张图像

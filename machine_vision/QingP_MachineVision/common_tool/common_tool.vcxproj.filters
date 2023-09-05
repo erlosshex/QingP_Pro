@@ -30,6 +30,15 @@
     <Filter Include="Source Files\convert_image">
       <UniqueIdentifier>{5035848c-e3a6-4c43-ab74-2df8a6114f9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\common_transform">
+      <UniqueIdentifier>{14be8e2c-4aab-4a1c-b960-65c0fb622244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common_judge">
+      <UniqueIdentifier>{8d56cc53-df85-4474-8fa6-5ec9b8e5a34e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NormalTool">
+      <UniqueIdentifier>{69c5684f-f4c9-433a-86b9-3dc295598105}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_tool_global.h">
@@ -58,6 +67,15 @@
     <ClCompile Include="source\convert_image\ConvertImage.cpp">
       <Filter>Source Files\convert_image</Filter>
     </ClCompile>
+    <ClCompile Include="source\common_transform\CommonTransform.cpp">
+      <Filter>Source Files\common_transform</Filter>
+    </ClCompile>
+    <ClCompile Include="source\common_judge\CommonJudge.cpp">
+      <Filter>Source Files\common_judge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\normal_tool\NormalTool.cpp">
+      <Filter>Source Files\NormalTool</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="source\file_operator\FileOperator.h">
@@ -65,6 +83,15 @@
     </QtMoc>
     <QtMoc Include="source\convert_image\ConvertImage.h">
       <Filter>Source Files\convert_image</Filter>
+    </QtMoc>
+    <QtMoc Include="source\common_transform\CommonTransform.h">
+      <Filter>Source Files\common_transform</Filter>
+    </QtMoc>
+    <QtMoc Include="source\common_judge\CommonJudge.h">
+      <Filter>Source Files\common_judge</Filter>
+    </QtMoc>
+    <QtMoc Include="source\normal_tool\NormalTool.h">
+      <Filter>Source Files\NormalTool</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>
