@@ -21,18 +21,18 @@ cv::Mat CombineWeightAdd::transform(cv::Mat cvmImage1, cv::Mat cvmImage2, cv::Ma
 	return cvmImageResult;
 }
 
-cv::Mat CombineWeightAdd::transform(const QVector<cv::Mat>& veccvmImage)
+cv::Mat CombineWeightAdd::transform(const QVector<cv::Mat>& qveccvmImage)
 {
-	if (veccvmImage.size() <= 0)
+	if (qveccvmImage.size() <= 0)
 	{
 		return cv::Mat();
 	}
 
-	cv::Mat cvmImageResult = cv::Mat::zeros(veccvmImage[0].size(), veccvmImage[0].type());
+	cv::Mat cvmImageResult = cv::Mat::zeros(qveccvmImage[0].size(), qveccvmImage[0].type());
 
-	for (int iIdx = 0; iIdx < veccvmImage.size(); ++iIdx)
+	for (int iIdx = 0; iIdx < qveccvmImage.size(); ++iIdx)
 	{
-		cvmImageResult = cvmImageResult + veccvmImage[iIdx];
+		cvmImageResult = cvmImageResult + qveccvmImage[iIdx];
 	}
 
 	return cvmImageResult;

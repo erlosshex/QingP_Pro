@@ -27,6 +27,9 @@
     <Filter Include="Source Files\tool_common">
       <UniqueIdentifier>{3800fcd6-3142-4f2b-aa25-34e5496f55c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\convert_image">
+      <UniqueIdentifier>{5035848c-e3a6-4c43-ab74-2df8a6114f9b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_tool_global.h">
@@ -52,10 +55,16 @@
     <ClCompile Include="source\file_operator\FileOperator.cpp">
       <Filter>Source Files\file_operator</Filter>
     </ClCompile>
+    <ClCompile Include="source\convert_image\ConvertImage.cpp">
+      <Filter>Source Files\convert_image</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="source\file_operator\FileOperator.h">
       <Filter>Source Files\file_operator</Filter>
+    </QtMoc>
+    <QtMoc Include="source\convert_image\ConvertImage.h">
+      <Filter>Source Files\convert_image</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

@@ -36,9 +36,9 @@ public:
     /// <summary>
     /// 整合多张图像
     /// </summary>
-    /// <param name="veccvmImage">多张图像的Vector</param>
+    /// <param name="qveccvmImage">多张图像的Vector</param>
     /// <returns>返回值，整合后的图像</returns>
-    cv::Mat transform(const QVector<cv::Mat>& veccvmImage);
+    cv::Mat transform(const QVector<cv::Mat>& qveccvmImage);
 
     /// <summary>
     /// 拉伸一张图像

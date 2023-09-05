@@ -90,6 +90,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\algorithm_operator\algorithm_operator.vcxproj">
+      <Project>{7fc31a0d-89df-4513-a4a6-52584a488794}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\camera_capture\camera_capture.vcxproj">
       <Project>{46b4f776-019e-4185-8aa3-cb7f9306ff19}</Project>
     </ProjectReference>

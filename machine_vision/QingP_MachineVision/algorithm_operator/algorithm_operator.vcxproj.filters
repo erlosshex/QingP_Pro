@@ -21,6 +21,9 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Source Files\blob">
+      <UniqueIdentifier>{5db95234-5b57-4590-97a8-498fb8caeb90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm_operator_global.h">
@@ -32,6 +35,15 @@
     <ClCompile Include="algorithm_operator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\blob\common_blob_inspect.cpp">
+      <Filter>Source Files\blob</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="source\blob\common_blob_inspect.h">
+      <Filter>Source Files\blob</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
