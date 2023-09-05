@@ -14,6 +14,11 @@ public:
     CombineIdentity();
     ~CombineIdentity();
 
+    /// <summary>
+    /// 恒等变换
+    /// </summary>
+    /// <param name="cvmImage">输入图像</param>
+    /// <returns>返回值，恒等变换后的图像</returns>
     cv::Mat transform(cv::Mat cvmImage);
 };
 
