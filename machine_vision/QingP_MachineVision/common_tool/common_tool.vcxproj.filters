@@ -36,7 +36,7 @@
     <Filter Include="Source Files\common_judge">
       <UniqueIdentifier>{8d56cc53-df85-4474-8fa6-5ec9b8e5a34e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\NormalTool">
+    <Filter Include="Source Files\normal_tool">
       <UniqueIdentifier>{69c5684f-f4c9-433a-86b9-3dc295598105}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -74,7 +74,7 @@
       <Filter>Source Files\common_judge</Filter>
     </ClCompile>
     <ClCompile Include="source\normal_tool\NormalTool.cpp">
-      <Filter>Source Files\NormalTool</Filter>
+      <Filter>Source Files\normal_tool</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,7 +91,7 @@
       <Filter>Source Files\common_judge</Filter>
     </QtMoc>
     <QtMoc Include="source\normal_tool\NormalTool.h">
-      <Filter>Source Files\NormalTool</Filter>
+      <Filter>Source Files\normal_tool</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

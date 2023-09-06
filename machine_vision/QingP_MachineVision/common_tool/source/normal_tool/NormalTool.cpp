@@ -172,5 +172,329 @@ double CommonTool_NormalTool::overlapOfTwoRectList(const QList<cv::Rect>& lstcvr
 	}
 }
 
+int CommonTool_NormalTool::isRoiValid(bool& bIsValid, int iImageWidth, int iImageHeight, cv::Rect rRoi)
+{
+	try
+	{
+		bIsValid = false;
+		cv::Rect cvrImageRect(0, 0, iImageWidth, iImageHeight);
+		if (cvrImageRect.contains(rRoi.tl()) &&
+			cvrImageRect.contains(cv::Point(rRoi.br().x - 1, rRoi.tl().y)) &&
+			cvrImageRect.contains(cv::Point(rRoi.tl().x, rRoi.br().y - 1)) &&
+			cvrImageRect.contains(rRoi.br() - cv::Point(1, 1)))
+		{
+			bIsValid = true;
+		}
+		else
+		{
+			bIsValid = false;
+		}
+		return TOOL_COMMON_OK;
+	}
+	catch (cv::Exception& ex)
+	{
+		bIsValid = false;
+		return TOOL_COMMON_UNKNOWERROR;
+	}
+}
+
+int CommonTool_NormalTool::isRoiValid(bool& bIsValid, cv::Mat mImage, cv::Rect rRoi)
+{
+	try
+	{
+		bIsValid = false;
+		if (mImage.empty()) return TOOL_COMMON_PARAERROR;
+		return isRoiValid(bIsValid, mImage.cols, mImage.rows, rRoi);
+	}
+	catch (cv::Exception& ex)
+	{
+		bIsValid = false;
+		return TOOL_COMMON_UNKNOWERROR;
+	}
+	catch (std::exception& ex)
+	{
+		bIsValid = false;
+		return TOOL_COMMON_UNKNOWERROR;
+	}
+}
+
+void CommonTool_NormalTool::ensureRectROIOfImage(const cv::Rect _crRoi, const int _iImageWidth, const int _iImageHeight, cv::Rect& _crEnsureRoi)
+{
+	//记录传入的ROI区域的左上角和右下角的拐点信息
+	int iRoiTLX = _crRoi.x;
+	int iRoiTLY = _crRoi.y;
+	int iRoiBRX = _crRoi.x + _crRoi.width - 1;
+	int iRoiBRY = _crRoi.y + _crRoi.height - 1;
+
+	//修改后的ROI区域的左上角和右下角的拐点信息
+	int iEnsureTLX = 0, iEnsureTLY = 0, iEnsureBRX = 0, iEnsureBRY = 0;
+
+	//判断是否溢出图片区域，并做对应修正
+	if (iRoiTLX < 0)
+		iEnsureTLX = 0;
+	else if (iRoiTLX >= _iImageWidth)
+	{
+		_crEnsureRoi = cv::Rect(-1, -1, -1, -1);
+		return;
+	}
+	else
+		iEnsureTLX = iRoiTLX;
+
+	if (iRoiTLY < 0)
+		iEnsureTLY = 0;
+	else if (iRoiTLY >= _iImageHeight)
+	{
+		_crEnsureRoi = cv::Rect(-1, -1, -1, -1);
+		return;
+	}
+	else
+		iEnsureTLY = iRoiTLY;
+
+	if (iRoiBRX >= _iImageWidth)
+		iEnsureBRX = _iImageWidth - 1;
+	else if (iRoiBRX < 0)
+	{
+		_crEnsureRoi = cv::Rect(-1, -1, -1, -1);
+		return;
+	}
+	else
+		iEnsureBRX = iRoiBRX;
+
+	if (iRoiBRY >= _iImageHeight)
+		iEnsureBRY = _iImageHeight - 1;
+	else if (iRoiBRY < 0)
+	{
+		_crEnsureRoi = cv::Rect(-1, -1, -1, -1);
+		return;
+	}
+	else
+		iEnsureBRY = iRoiBRY;
+
+	//重新设定修改后的ROI区域
+	_crEnsureRoi = cv::Rect(iEnsureTLX, iEnsureTLY, abs(iEnsureBRX - iEnsureTLX) + 1, abs(iEnsureBRY - iRoiTLY) + 1);
+}
+
+HalconCpp::HObject CommonTool_NormalTool::ensureRegionOfImage(HalconCpp::HObject hoImage, HalconCpp::HObject hoRegion)
+{
+	try
+	{
+		HalconCpp::HObject hoImageRegion;
+		HalconCpp::HObject hoValidRegion;
+		hoImageRegion = getEntireImageRoi(hoImage);
+		HalconCpp::Intersection(hoRegion, hoImageRegion, &hoValidRegion);
+		return hoValidRegion;
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		return hoRegion;
+	}
+
+}
+
+void CommonTool_NormalTool::isHoImageEmpty(HalconCpp::HObject hoImg, bool& isEmpty)
+{
+	try
+	{
+		isEmpty = false;
+
+		HalconCpp::HObject hoEmptyObj;
+		HalconCpp::GenEmptyObj(&hoEmptyObj);
+
+		HalconCpp::HTuple hvIsEqual;
+		HalconCpp::TestEqualObj(hoEmptyObj, hoImg, &hvIsEqual);
+
+		if (hvIsEqual.I() == 1) isEmpty = true;
+		else isEmpty = false;
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		isEmpty = false;
+	}
+}
+
+bool CommonTool_NormalTool::isHObjectInit(HalconCpp::HObject hoObj)
+{
+	try
+	{
+		return hoObj.IsInitialized();
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		return false;
+	}
+	catch (std::exception& ex)
+	{
+		return false;
+	}
+}
+
+bool CommonTool_NormalTool::isHObjectEmpty(HalconCpp::HObject hoObj)
+{
+	try
+	{
+		HalconCpp::HObject hoEmptyObj;
+		HalconCpp::GenEmptyObj(&hoEmptyObj);
+
+		HalconCpp::HTuple hvIsEqual;
+		HalconCpp::TestEqualObj(hoEmptyObj, hoObj, &hvIsEqual);
+
+		if (hvIsEqual.I() == 1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		return true;
+	}
+	catch (std::exception& ex)
+	{
+		return true;
+	}
+}
+
+bool CommonTool_NormalTool::isHObjectValid(HalconCpp::HObject hoObj)
+{
+	if (false == isHObjectInit(hoObj))
+	{
+		return false;
+	}
+
+	if (true == isHObjectEmpty(hoObj))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+HalconCpp::HObject CommonTool_NormalTool::getEntireImageRoi(cv::Mat cvmImage)
+{
+	try
+	{
+		int iImageWidth = cvmImage.cols;
+		int iImageHeight = cvmImage.rows;
+		cv::Rect cvrRect(0, 0, iImageWidth, iImageHeight);
+		return genRectRegion(cvrRect);
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		return HalconCpp::HObject();
+	}
+	catch (std::exception& ex)
+	{
+		return HalconCpp::HObject();
+	}
+}
+
+HalconCpp::HObject CommonTool_NormalTool::getEntireImageRoi(HalconCpp::HObject hoImage)
+{
+	try
+	{
+		HalconCpp::HTuple hvImageWidth, hvImageHeight;
+		HalconCpp::GetImageSize(hoImage, &hvImageWidth, &hvImageHeight);
+		cv::Rect cvrRect(0, 0, hvImageWidth.I(), hvImageHeight.I());
+		return genRectRegion(cvrRect);
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		return HalconCpp::HObject();
+	}
+	catch (std::exception& ex)
+	{
+		return HalconCpp::HObject();
+	}
+}
+
+void CommonTool_NormalTool::getEntireImageRoi(HalconCpp::HObject hoImage, cv::Rect& cvrEntireImageRoi)
+{
+	try
+	{
+		HalconCpp::HTuple hvImageWidth, hvImageHeight;
+		HalconCpp::GetImageSize(hoImage, &hvImageWidth, &hvImageHeight);
+		cvrEntireImageRoi.x = 0;
+		cvrEntireImageRoi.y = 0;
+		cvrEntireImageRoi.width = hvImageWidth.D();
+		cvrEntireImageRoi.height = hvImageHeight.D();
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		cvrEntireImageRoi = cv::Rect();
+	}
+}
+
+cv::Rect CommonTool_NormalTool::getEntireImageCvRoi(cv::Mat cvmImage)
+{
+	try
+	{
+		int iImageWidth = cvmImage.cols;
+		int iImageHeight = cvmImage.rows;
+		return cv::Rect(0, 0, iImageWidth, iImageHeight);
+	}
+	catch (std::exception& ex)
+	{
+		return cv::Rect();
+	}
+}
+
+cv::Rect CommonTool_NormalTool::getEntireImageCvRoi(HalconCpp::HObject hoImage)
+{
+	try
+	{
+		HalconCpp::HTuple hvImageWidth, hvImageHeight;
+		HalconCpp::GetImageSize(hoImage, &hvImageWidth, &hvImageHeight);
+		return cv::Rect(0, 0, hvImageWidth.I(), hvImageHeight.I());
+	}
+	catch (HalconCpp::HException& ex)
+	{
+		return cv::Rect();
+	}
+	catch (std::exception& ex)
+	{
+		return cv::Rect();
+	}
+}
+
+void CommonTool_NormalTool::RGB2HSVFull(cv::Mat cvmRgbImg, std::vector<cv::Mat>& veccvmHsvImg)
+{
+	cv::Mat cvmImgHSV;
+	cv::cvtColor(cvmRgbImg, cvmImgHSV, cv::ColorConversionCodes::COLOR_RGB2HSV_FULL);
+	cv::split(cvmImgHSV, veccvmHsvImg);
+}
+
+void CommonTool_NormalTool::RGB2HSVFull(cv::Mat cvmRgbImg, QVector<cv::Mat>& veccvmHsvImg)
+{
+	veccvmHsvImg.clear();
+	veccvmHsvImg.squeeze();
+	std::vector<cv::Mat> veccvmImg;
+	RGB2HSVFull(cvmRgbImg, veccvmImg);
+	for (int iIdx = 0; iIdx < veccvmImg.size(); ++iIdx)
+	{
+		veccvmHsvImg.append(veccvmImg[iIdx]);
+	}
+}
+
+void CommonTool_NormalTool::BGR2HSVFull(cv::Mat cvmBgrImg, std::vector<cv::Mat>& veccvmHsvImg)
+{
+	cv::Mat cvmImgHSV;
+	cv::cvtColor(cvmBgrImg, cvmImgHSV, cv::ColorConversionCodes::COLOR_BGR2HSV_FULL);
+	cv::split(cvmImgHSV, veccvmHsvImg);
+}
+
+void CommonTool_NormalTool::BGR2HSVFull(cv::Mat cvmBgrImg, QVector<cv::Mat>& veccvmHsvImg)
+{
+	veccvmHsvImg.clear();
+	veccvmHsvImg.squeeze();
+	std::vector<cv::Mat> veccvmImg;
+	BGR2HSVFull(cvmBgrImg, veccvmImg);
+	for (int iIdx = 0; iIdx < veccvmImg.size(); ++iIdx)
+	{
+		veccvmHsvImg.append(veccvmImg[iIdx]);
+	}
+}
 
 

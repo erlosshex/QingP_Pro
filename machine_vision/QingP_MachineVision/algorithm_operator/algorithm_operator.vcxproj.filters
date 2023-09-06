@@ -24,6 +24,12 @@
     <Filter Include="Source Files\blob">
       <UniqueIdentifier>{5db95234-5b57-4590-97a8-498fb8caeb90}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\find_edge">
+      <UniqueIdentifier>{3b447bcf-783d-46e1-91ce-f8fd55122f74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{ea2147b0-934c-48ee-89e7-d6ef8b031d10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm_operator_global.h">
@@ -35,15 +41,60 @@
     <ClCompile Include="algorithm_operator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClInclude Include="source\algorithm_operator_common\algorithm_operator_common_define.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\algorithm_operator_common\algorithm_operator_common_enum.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\algorithm_operator_common\algorithm_operator_common_struct.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\find_edge\RansacAlgorithm.h">
+      <Filter>Source Files\find_edge</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\blob\common_blob_inspect.cpp">
       <Filter>Source Files\blob</Filter>
     </ClCompile>
+    <ClCompile Include="source\find_edge\bspline.cpp">
+      <Filter>Source Files\find_edge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\find_edge\cubicspline.cpp">
+      <Filter>Source Files\find_edge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\find_edge\EdgePointSpline.cpp">
+      <Filter>Source Files\find_edge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\find_edge\FindEdge.cpp">
+      <Filter>Source Files\find_edge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\find_edge\linesegmentdetector.cpp">
+      <Filter>Source Files\find_edge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\find_edge\RansacAlgorithm.cpp">
+      <Filter>Source Files\find_edge</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="source\blob\common_blob_inspect.h">
       <Filter>Source Files\blob</Filter>
+    </QtMoc>
+    <QtMoc Include="source\find_edge\bspline.h">
+      <Filter>Source Files\find_edge</Filter>
+    </QtMoc>
+    <QtMoc Include="source\find_edge\cubicspline.h">
+      <Filter>Source Files\find_edge</Filter>
+    </QtMoc>
+    <QtMoc Include="source\find_edge\EdgePointSpline.h">
+      <Filter>Source Files\find_edge</Filter>
+    </QtMoc>
+    <QtMoc Include="source\find_edge\linesegmentdetector.h">
+      <Filter>Source Files\find_edge</Filter>
+    </QtMoc>
+    <QtMoc Include="source\find_edge\FindEdge.h">
+      <Filter>Source Files\find_edge</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

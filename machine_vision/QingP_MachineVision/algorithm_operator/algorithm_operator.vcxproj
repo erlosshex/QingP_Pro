@@ -90,7 +90,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\blob\common_blob_inspect.cpp" />
+    <ClCompile Include="source\find_edge\bspline.cpp" />
+    <ClCompile Include="source\find_edge\cubicspline.cpp" />
+    <ClCompile Include="source\find_edge\EdgePointSpline.cpp" />
+    <ClCompile Include="source\find_edge\FindEdge.cpp" />
+    <ClCompile Include="source\find_edge\linesegmentdetector.cpp" />
+    <ClCompile Include="source\find_edge\RansacAlgorithm.cpp" />
     <ClInclude Include="algorithm_operator_global.h" />
+    <QtMoc Include="source\find_edge\bspline.h" />
+    <ClInclude Include="source\algorithm_operator_common\algorithm_operator_common_define.h" />
+    <ClInclude Include="source\algorithm_operator_common\algorithm_operator_common_enum.h" />
+    <ClInclude Include="source\algorithm_operator_common\algorithm_operator_common_struct.h" />
+    <QtMoc Include="source\find_edge\cubicspline.h" />
+    <QtMoc Include="source\find_edge\EdgePointSpline.h" />
+    <QtMoc Include="source\find_edge\FindEdge.h" />
+    <QtMoc Include="source\find_edge\linesegmentdetector.h" />
+    <ClInclude Include="source\find_edge\RansacAlgorithm.h" />
     <QtMoc Include="source\blob\common_blob_inspect.h" />
     <QtMoc Include="algorithm_operator.h" />
     <ClCompile Include="algorithm_operator.cpp" />
