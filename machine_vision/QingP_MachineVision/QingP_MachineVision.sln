@@ -9,10 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm_operator", "algor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm_kit", "algorithm_kit\algorithm_kit.vcxproj", "{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_module", "test_module\test_module.vcxproj", "{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_module", "example_module\example_module.vcxproj", "{3812C273-B39C-4F5E-9979-3C30400E82B5}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "camera_capture", "camera_capture\camera_capture.vcxproj", "{46B4F776-019E-4185-8AA3-CB7F9306FF19}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common_tool", "common_tool\common_tool.vcxproj", "{60FDBB3B-43A0-4DC7-BFB8-044FFC19DDA3}"
@@ -22,6 +18,16 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "combine_capture", "combine_capture\combine_capture.vcxproj", "{41417314-72D0-4C30-935C-D2F1D6427F0B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "save_load_image", "save_load_image\save_load_image.vcxproj", "{EE8B1140-30C1-4A0B-A7BC-F4A2754B821B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A46C1B3C-865F-491B-947C-A0F1E51EB565}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_template", "example_module\example_template\example_template.vcxproj", "{054D04C5-90D3-4B4B-ABA4-EC8C86A4B1D4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_template", "test_module\test_template\test_template.vcxproj", "{F9CDDB51-CC28-42DD-9171-16B53FA7DF8E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "small_tool_template", "small_tool\small_tool_template\small_tool_template.vcxproj", "{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,14 +47,6 @@ Global
 		{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}.Debug|x64.Build.0 = Debug|x64
 		{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}.Release|x64.ActiveCfg = Release|x64
 		{1EE3FDA9-2B51-467C-8597-F9D6D4D2EA92}.Release|x64.Build.0 = Release|x64
-		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Debug|x64.ActiveCfg = Debug|x64
-		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Debug|x64.Build.0 = Debug|x64
-		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Release|x64.ActiveCfg = Release|x64
-		{5EFDE805-9017-4D97-8F6E-CB36C7F5B1F4}.Release|x64.Build.0 = Release|x64
-		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Debug|x64.ActiveCfg = Debug|x64
-		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Debug|x64.Build.0 = Debug|x64
-		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Release|x64.ActiveCfg = Release|x64
-		{3812C273-B39C-4F5E-9979-3C30400E82B5}.Release|x64.Build.0 = Release|x64
 		{46B4F776-019E-4185-8AA3-CB7F9306FF19}.Debug|x64.ActiveCfg = Debug|x64
 		{46B4F776-019E-4185-8AA3-CB7F9306FF19}.Debug|x64.Build.0 = Debug|x64
 		{46B4F776-019E-4185-8AA3-CB7F9306FF19}.Release|x64.ActiveCfg = Release|x64
@@ -65,9 +63,26 @@ Global
 		{EE8B1140-30C1-4A0B-A7BC-F4A2754B821B}.Debug|x64.Build.0 = Debug|x64
 		{EE8B1140-30C1-4A0B-A7BC-F4A2754B821B}.Release|x64.ActiveCfg = Release|x64
 		{EE8B1140-30C1-4A0B-A7BC-F4A2754B821B}.Release|x64.Build.0 = Release|x64
+		{054D04C5-90D3-4B4B-ABA4-EC8C86A4B1D4}.Debug|x64.ActiveCfg = Debug|x64
+		{054D04C5-90D3-4B4B-ABA4-EC8C86A4B1D4}.Debug|x64.Build.0 = Debug|x64
+		{054D04C5-90D3-4B4B-ABA4-EC8C86A4B1D4}.Release|x64.ActiveCfg = Release|x64
+		{054D04C5-90D3-4B4B-ABA4-EC8C86A4B1D4}.Release|x64.Build.0 = Release|x64
+		{F9CDDB51-CC28-42DD-9171-16B53FA7DF8E}.Debug|x64.ActiveCfg = Debug|x64
+		{F9CDDB51-CC28-42DD-9171-16B53FA7DF8E}.Debug|x64.Build.0 = Debug|x64
+		{F9CDDB51-CC28-42DD-9171-16B53FA7DF8E}.Release|x64.ActiveCfg = Release|x64
+		{F9CDDB51-CC28-42DD-9171-16B53FA7DF8E}.Release|x64.Build.0 = Release|x64
+		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}.Debug|x64.ActiveCfg = Debug|x64
+		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}.Debug|x64.Build.0 = Debug|x64
+		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}.Release|x64.ActiveCfg = Release|x64
+		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{054D04C5-90D3-4B4B-ABA4-EC8C86A4B1D4} = {AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}
+		{F9CDDB51-CC28-42DD-9171-16B53FA7DF8E} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
+		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB} = {FC99609E-616B-4FF4-B2D3-8D14088A6252}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EF76439-4250-4568-A0ED-84FBC7B9BDC6}
