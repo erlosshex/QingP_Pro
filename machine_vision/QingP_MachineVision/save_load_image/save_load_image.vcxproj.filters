@@ -21,6 +21,12 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Source Files\load_image">
+      <UniqueIdentifier>{490cfe18-b3f4-4398-a1c6-a62d40617bd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\save_image">
+      <UniqueIdentifier>{3db77174-dd49-43c1-854c-fcb916d7f4db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="save_load_image_global.h">
@@ -32,6 +38,21 @@
     <ClCompile Include="save_load_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\save_image\save_one_image.cpp">
+      <Filter>Source Files\save_image</Filter>
+    </ClCompile>
+    <ClCompile Include="source\load_image\load_one_image.cpp">
+      <Filter>Source Files\load_image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="source\load_image\load_one_image.h">
+      <Filter>Source Files\load_image</Filter>
+    </QtMoc>
+    <QtMoc Include="source\save_image\save_one_image.h">
+      <Filter>Source Files\save_image</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
