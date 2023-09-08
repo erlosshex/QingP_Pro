@@ -1,0 +1,14 @@
+﻿#ifndef SAVELOADIMAGE_COMMON_DEFINE_H
+#define SAVELOADIMAGE_COMMON_DEFINE_H
+
+//加载一张图像错误代码
+#define LOADONEIMAGE_COMMON_OK                0x00000000 //运行成功
+#define LOADONEIMAGE_COMMON_PARAERROR         0x00000001 //函数入参错误
+#define LOADONEIMAGE_COMMON_UNKNOWERROR       0x00000002 //未知错误
+
+//保存一张图像错误代码
+#define SAVEONEIMAGE_COMMON_OK                0x00000100 //运行成功
+#define SAVEONEIMAGE_COMMON_PARAERROR         0x00000101 //函数入参错误
+#define SAVEONEIMAGE_COMMON_UNKNOWERROR       0x00000102 //未知错误
+
+#endif

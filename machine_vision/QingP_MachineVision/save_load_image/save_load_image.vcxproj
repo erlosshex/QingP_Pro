@@ -48,10 +48,12 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(QtMsBuild)\Qt.props" />
+    <Import Project="..\third_party\props\opencv470_D.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(QtMsBuild)\Qt.props" />
+    <Import Project="..\third_party\props\opencv470_R.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
@@ -88,10 +90,18 @@
     <ClCompile Include="source\load_image\load_one_image.cpp" />
     <ClCompile Include="source\save_image\save_one_image.cpp" />
     <ClInclude Include="save_load_image_global.h" />
+    <ClInclude Include="source\save_load_image_common\save_load_image_common_define.h" />
+    <ClInclude Include="source\save_load_image_common\save_load_image_common_enum.h" />
+    <ClInclude Include="source\save_load_image_common\save_load_image_common_struct.h" />
     <QtMoc Include="source\load_image\load_one_image.h" />
     <QtMoc Include="source\save_image\save_one_image.h" />
     <QtMoc Include="save_load_image.h" />
     <ClCompile Include="save_load_image.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common_tool\common_tool.vcxproj">
+      <Project>{60fdbb3b-43a0-4dc7-bfb8-044ffc19dda3}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

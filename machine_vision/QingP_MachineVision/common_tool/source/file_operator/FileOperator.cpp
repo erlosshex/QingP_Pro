@@ -598,3 +598,51 @@ QString CommonTool_FileOperator::getCurrentDateStamp1()
 {
 	return QDate::currentDate().toString("yyyyMMdd");
 }
+
+QStringList CommonTool_FileOperator::splitFilePathname(QString strFilePathname)
+{
+	try
+	{
+		QFileInfo qfiFileInfo(strFilePathname);
+
+		QString strFilePath = "";
+		QString strFileName = "";
+
+		strFilePath = qfiFileInfo.absoluteFilePath() + "/";
+		strFileName = qfiFileInfo.fileName();
+
+		QStringList lststrFilePathAndName;
+		lststrFilePathAndName.append(strFilePath);
+		lststrFilePathAndName.append(strFileName);
+
+		return lststrFilePathAndName;
+	}
+	catch (std::exception& ex)
+	{
+		return QStringList();
+	}
+}
+
+QStringList CommonTool_FileOperator::splitFileName(QString strFileName)
+{
+	try
+	{
+		QFileInfo qfiFileInfo(strFileName);
+
+		QString strFileBaseName = "";
+		QString strFileSuffix = "";
+
+		strFileBaseName = qfiFileInfo.completeBaseName();
+		strFileSuffix = qfiFileInfo.suffix();
+
+		QStringList lststrFileNameAndSuffix;
+		lststrFileNameAndSuffix.append(strFileBaseName);
+		lststrFileNameAndSuffix.append(strFileSuffix);
+
+		return lststrFileNameAndSuffix;
+	}
+	catch (std::exception& ex)
+	{
+		return QStringList();
+	}
+}

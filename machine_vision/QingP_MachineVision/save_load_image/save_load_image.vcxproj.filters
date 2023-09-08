@@ -27,6 +27,9 @@
     <Filter Include="Source Files\save_image">
       <UniqueIdentifier>{3db77174-dd49-43c1-854c-fcb916d7f4db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{fcd4c0c2-68cb-4573-8d69-4d6098fe63d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="save_load_image_global.h">
@@ -38,6 +41,15 @@
     <ClCompile Include="save_load_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClInclude Include="source\save_load_image_common\save_load_image_common_define.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\save_load_image_common\save_load_image_common_enum.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\save_load_image_common\save_load_image_common_struct.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\save_image\save_one_image.cpp">

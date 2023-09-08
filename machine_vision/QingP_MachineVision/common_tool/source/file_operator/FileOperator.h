@@ -63,6 +63,20 @@ public:
 	// get current date stamp
 	static QString getCurrentDateStamp();
 	static QString getCurrentDateStamp1();
+
+	/// <summary>
+	/// 分割文件的绝对路径
+	/// </summary>
+	/// <param name="strFilePathname">文件的绝对路径</param>
+	/// <returns>返回值，包含文件的路径和文件名的字符串列表</returns>
+	static QStringList splitFilePathname(QString strFilePathname);
+
+	/// <summary>
+	/// 分割文件的名字
+	/// </summary>
+	/// <param name="strFileName">文件的名字</param>
+	/// <returns>返回值，包含文件名称和文件后缀</returns>
+	static QStringList splitFileName(QString strFileName);
 };
 
 #endif // COMMONTOOL_FILEOPERATOR_H
