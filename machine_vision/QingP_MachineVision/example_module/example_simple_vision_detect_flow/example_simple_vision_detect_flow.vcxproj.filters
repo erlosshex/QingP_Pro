@@ -32,9 +32,15 @@
     <ClCompile Include="source\vision_detect_flow\vision_detect_flow.cpp">
       <Filter>Source Files\vision_detect_flow</Filter>
     </ClCompile>
+    <ClCompile Include="source\vision_detect_flow\vision_detect_flow_thread.cpp">
+      <Filter>Source Files\vision_detect_flow</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="source\vision_detect_flow\vision_detect_flow.h">
+      <Filter>Source Files\vision_detect_flow</Filter>
+    </QtMoc>
+    <QtMoc Include="source\vision_detect_flow\vision_detect_flow_thread.h">
       <Filter>Source Files\vision_detect_flow</Filter>
     </QtMoc>
   </ItemGroup>

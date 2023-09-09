@@ -89,6 +89,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source\vision_detect_flow\vision_detect_flow.cpp" />
+    <ClCompile Include="source\vision_detect_flow\vision_detect_flow_thread.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\algorithm_kit\algorithm_kit.vcxproj">
@@ -109,6 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="source\vision_detect_flow\vision_detect_flow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="source\vision_detect_flow\vision_detect_flow_thread.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
