@@ -1,4 +1,4 @@
-#ifndef SAVELOADIMAGE_SAVEONEIMAGE_H
+ï»¿#ifndef SAVELOADIMAGE_SAVEONEIMAGE_H
 #define SAVELOADIMAGE_SAVEONEIMAGE_H
 
 #include "../../save_load_image_global.h"
@@ -40,10 +40,10 @@ public:
     SaveOneImageParam m_stParam;
 
     /// <summary>
-    /// ±£´æÍ¼Æ¬
+    /// ä¿å­˜å›¾ç‰‡
     /// </summary>
-    /// <param name="stResult">·µ»ØÖµ£¬±£´æÍ¼Æ¬ºóµÄ½á¹û</param>
-    /// <returns>´íÎó´úÂë</returns>
+    /// <param name="stResult">è¿”å›å€¼ï¼Œä¿å­˜å›¾ç‰‡åçš„ç»“æœ</param>
+    /// <returns>é”™è¯¯ä»£ç </returns>
     uint saveImage(SaveOneImageResult& stResult);
 };
 

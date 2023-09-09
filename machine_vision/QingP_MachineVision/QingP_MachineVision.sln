@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_template", "test_modul
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "small_tool_template", "small_tool\small_tool_template\small_tool_template.vcxproj", "{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_simple_vision_detect_flow", "example_module\example_simple_vision_detect_flow\example_simple_vision_detect_flow.vcxproj", "{7CF2F290-E985-4D7D-A6C4-6923406B7C72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -75,6 +77,10 @@ Global
 		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}.Debug|x64.Build.0 = Debug|x64
 		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}.Release|x64.ActiveCfg = Release|x64
 		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB}.Release|x64.Build.0 = Release|x64
+		{7CF2F290-E985-4D7D-A6C4-6923406B7C72}.Debug|x64.ActiveCfg = Debug|x64
+		{7CF2F290-E985-4D7D-A6C4-6923406B7C72}.Debug|x64.Build.0 = Debug|x64
+		{7CF2F290-E985-4D7D-A6C4-6923406B7C72}.Release|x64.ActiveCfg = Release|x64
+		{7CF2F290-E985-4D7D-A6C4-6923406B7C72}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{054D04C5-90D3-4B4B-ABA4-EC8C86A4B1D4} = {AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}
 		{F9CDDB51-CC28-42DD-9171-16B53FA7DF8E} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
 		{3F10F351-3CA8-4D83-9FF9-7BAC3B01B9AB} = {FC99609E-616B-4FF4-B2D3-8D14088A6252}
+		{7CF2F290-E985-4D7D-A6C4-6923406B7C72} = {AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EF76439-4250-4568-A0ED-84FBC7B9BDC6}

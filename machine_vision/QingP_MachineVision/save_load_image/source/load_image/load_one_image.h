@@ -1,4 +1,4 @@
-#ifndef SAVELOADIMAGE_LOADONEIMAGE_H
+О╩©#ifndef SAVELOADIMAGE_LOADONEIMAGE_H
 #define SAVELOADIMAGE_LOADONEIMAGE_H
 
 #include "../../save_load_image_global.h"
@@ -40,10 +40,10 @@ public:
     LoadOneImageParam m_stParam;
 
     /// <summary>
-    /// ╪стьм╪ф╛
+    /// Е┼═Х╫╫Е⌡╬Г┴┤
     /// </summary>
-    /// <param name="stResult">╥╣╩ьж╣ё╛╪стьм╪ф╛╨С╣д╫А╧Ш</param>
-    /// <returns>╢МнС╢ЗбК</returns>
+    /// <param name="stResult">Х©■Е⌡·Е─╪О╪▄Е┼═Х╫╫Е⌡╬Г┴┤Е░▌Г └Г╩⌠Ф·°</param>
+    /// <returns>И■≥Х╞╞Д╩ёГ═│</returns>
     uint loadImage(LoadOneImageResult& stResult);
 
 };
