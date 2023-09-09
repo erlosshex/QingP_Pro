@@ -49,14 +49,14 @@ uint SaveOneImage::saveImage(SaveOneImageResult& stResult)
 			return SAVEONEIMAGE_COMMON_PARAERROR;
 		}
 
-		CommonTool_FileOperator::createPath(strImagePathname);
+		CommonTool_FileOperator::createPath(strImagePath);
 
 		if (false == CommonTool_FileOperator::isDirExist(strImagePath))
 		{
 			return SAVEONEIMAGE_COMMON_PARAERROR;
 		}
 
-		stResult.bIsOK = cv::imwrite(strImagePathname.toLocal8Bit().toStdString(), m_stParam.cvmImage);
+		stResult.bIsOK = cv::imwrite(strImagePathname.toLocal8Bit().toStdString().c_str(), m_stParam.cvmImage);
 
 		stResult.strImagePath = strImagePath;
 		stResult.strImageName = strImageName;

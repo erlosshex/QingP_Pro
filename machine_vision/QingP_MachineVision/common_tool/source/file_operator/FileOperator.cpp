@@ -608,7 +608,7 @@ QStringList CommonTool_FileOperator::splitFilePathname(QString strFilePathname)
 		QString strFilePath = "";
 		QString strFileName = "";
 
-		strFilePath = qfiFileInfo.absoluteFilePath() + "/";
+		strFilePath = qfiFileInfo.absolutePath() + "/";
 		strFileName = qfiFileInfo.fileName();
 
 		QStringList lststrFilePathAndName;
