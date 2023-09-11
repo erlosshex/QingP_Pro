@@ -1,4 +1,4 @@
-#include "vision_detect_flow_thread.h"
+ï»¿#include "vision_detect_flow_thread.h"
 
 VisionDetectFlowThread::VisionDetectFlowThread()
 {
@@ -29,41 +29,41 @@ void VisionDetectFlowThread::detect()
 	cv::Mat cvmTestImage;
 	cv::Mat cvmResultImage;
 
-	qDebug() << QStringLiteral("1.¼òµ¥µÄÈ¡Ïñ£¨¶ÁÈ¡±¾µØÍ¼Æ¬£©");
+	qDebug() << QStringLiteral("1.ç®€å•çš„å–åƒï¼ˆè¯»å–æœ¬åœ°å›¾ç‰‡ï¼‰");
 	CameraCommonStruct::CameraCaptureFrame stCaptureImage;
 	m_pclsCameraSingleFileOpenCV->setCaptureImagePathname(strImagePathname);
 	m_pclsCameraSingleFileOpenCV->getCaptureImage(stCaptureImage);
 	
-	qDebug() << QStringLiteral("2.¼òµ¥µÄÍ¼ÏñÔ¤´¦Àí£¨·µ»ØÔ­±¾µÄÍ¼Ïñ£©");
+	qDebug() << QStringLiteral("2.ç®€å•çš„å›¾åƒé¢„å¤„ç†ï¼ˆè¿”å›žåŽŸæœ¬çš„å›¾åƒï¼‰");
 	cvmTestImage = m_pclsCombineIdentity->transform(stCaptureImage.cvmImage);
 
-	qDebug() << QStringLiteral("3.¼òµ¥µÄÍ¼ÏñÏÔÊ¾£¨Ê¹ÓÃimshow£¬ÏÔÊ¾5s£©");
+	qDebug() << QStringLiteral("3.ç®€å•çš„å›¾åƒæ˜¾ç¤ºï¼ˆä½¿ç”¨imshowï¼Œæ˜¾ç¤º5sï¼‰");
 	showImage(cvmTestImage);
 
-	qDebug() << QStringLiteral("4.¼òµ¥µÄvision¼ì²â·½Ê½£¨ÔÚÍ¼ÏñÉÏ»­Ò»¸öÔ²ÐÎ£©");
+	qDebug() << QStringLiteral("4.ç®€å•çš„visionæ£€æµ‹æ–¹å¼ï¼ˆåœ¨å›¾åƒä¸Šç”»ä¸€ä¸ªåœ†å½¢ï¼‰");
 	cvmResultImage = detectImage(cvmTestImage);
 
-	qDebug() << QStringLiteral("5.¼òµ¥µÄ¼ì²â½á¹ûÔÙÏÔÊ¾£¨Ê¹ÓÃimshow£¬ÏÔÊ¾5s)");
+	qDebug() << QStringLiteral("5.ç®€å•çš„æ£€æµ‹ç»“æžœå†æ˜¾ç¤ºï¼ˆä½¿ç”¨imshowï¼Œæ˜¾ç¤º5s)");
 	showImage(cvmResultImage);
 
-	qDebug() << QStringLiteral("6.¼òµ¥µÄ±£´æÔ­Í¼");
+	qDebug() << QStringLiteral("6.ç®€å•çš„ä¿å­˜åŽŸå›¾");
 	m_pclsSaveOneImage->m_stParam.cvmImage = cvmTestImage;
 	m_pclsSaveOneImage->m_stParam.strImagePathname = "D:/TestImage_01.bmp";
 	SaveOneImage::SaveOneImageResult stSaveTestImageResult;
 	m_pclsSaveOneImage->saveImage(stSaveTestImageResult);
 
-	qDebug() << QStringLiteral("7.¼òµ¥µÄ±£´æ½á¹ûÍ¼");
+	qDebug() << QStringLiteral("7.ç®€å•çš„ä¿å­˜ç»“æžœå›¾");
 	m_pclsSaveOneImage->m_stParam.cvmImage = cvmResultImage;
 	m_pclsSaveOneImage->m_stParam.strImagePathname = "D:/ResultImage_01.bmp";
 	SaveOneImage::SaveOneImageResult stSaveResultImageResult;
 	m_pclsSaveOneImage->saveImage(stSaveResultImageResult);
 
-	qDebug() << QStringLiteral("8.¼òµ¥µÄ¼ÓÔØÔ­Í¼");
+	qDebug() << QStringLiteral("8.ç®€å•çš„åŠ è½½åŽŸå›¾");
 	m_pclsLoadOneImage->m_stParam.strImagePathname = "D:/ResultImage_01.bmp";
 	LoadOneImage::LoadOneImageResult stLoadTestImageResult;
 	m_pclsLoadOneImage->loadImage(stLoadTestImageResult);
 
-	qDebug() << QStringLiteral("9.¼òµ¥ÏÔÊ¾¼ÓÔØµÄÔ­Í¼£¨Ê¹ÓÃimshow£¬ÏÔÊ¾5s£©");
+	qDebug() << QStringLiteral("9.ç®€å•æ˜¾ç¤ºåŠ è½½çš„åŽŸå›¾ï¼ˆä½¿ç”¨imshowï¼Œæ˜¾ç¤º5sï¼‰");
 	showImage(stLoadTestImageResult.cvmImage);
 }
 

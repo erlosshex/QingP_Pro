@@ -90,7 +90,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\common_judge\CommonJudge.cpp" />
+    <ClCompile Include="source\common_measure\OneDimensionMeasure.cpp" />
+    <ClCompile Include="source\common_transform\CommonAffineOperator.cpp" />
     <ClCompile Include="source\common_transform\CommonTransform.cpp" />
+    <ClCompile Include="source\common_transform\CvAffineTransform.cpp" />
     <ClCompile Include="source\convert_image\ConvertImage.cpp" />
     <ClCompile Include="source\file_operator\FileOperator.cpp" />
     <ClCompile Include="source\normal_tool\NormalTool.cpp" />
@@ -100,6 +103,9 @@
     <QtMoc Include="source\common_transform\CommonTransform.h" />
     <QtMoc Include="source\common_judge\CommonJudge.h" />
     <QtMoc Include="source\normal_tool\NormalTool.h" />
+    <QtMoc Include="source\common_transform\CommonAffineOperator.h" />
+    <QtMoc Include="source\common_transform\CvAffineTransform.h" />
+    <QtMoc Include="source\common_measure\OneDimensionMeasure.h" />
     <ClInclude Include="source\tool_common\tool_common_define.h" />
     <ClInclude Include="source\tool_common\tool_common_enum.h" />
     <ClInclude Include="source\tool_common\tool_common_struct.h" />

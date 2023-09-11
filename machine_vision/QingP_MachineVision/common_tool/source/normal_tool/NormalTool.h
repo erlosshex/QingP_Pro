@@ -202,6 +202,22 @@ public:
 	/// <param name="veccvmHsvImg">分离的HSV通道，QVector，返回值</param>
 	static void BGR2HSVFull(cv::Mat cvmBgrImg, QVector<cv::Mat>& veccvmHsvImg);
 
+	/// <summary>
+	/// 判断匹配的位置是否在查找范围内
+	/// </summary>
+	/// <param name="cvpMatchLoc">匹配的位置坐标</param>
+	/// <param name="lstcvrSearchRoi">搜索的范围列表</param>
+	/// <returns>返回值，true表示在搜索范围内，false表示不在搜索范围内</returns>
+	static bool isMatchPointInSearchRegion(cv::Point2d cvpMatchLoc, QList<cv::Rect> lstcvrSearchRoi);
+
+	/// <summary>
+	/// 计算曲线的曲率
+	/// </summary>
+	/// <param name="veccvpiContourPoints">曲线的点集</param>
+	/// <param name="iStep">步长</param>
+	/// <returns>返回的曲率的集合</returns>
+	static std::vector<double> getCurvature(const std::vector<cv::Point>& veccvpiContourPoints, int iStep);
+
 };
 
 #endif 

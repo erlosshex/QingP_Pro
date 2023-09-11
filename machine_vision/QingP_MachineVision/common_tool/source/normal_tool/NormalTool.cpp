@@ -497,4 +497,76 @@ void CommonTool_NormalTool::BGR2HSVFull(cv::Mat cvmBgrImg, QVector<cv::Mat>& vec
 	}
 }
 
+bool CommonTool_NormalTool::isMatchPointInSearchRegion(cv::Point2d cvpMatchLoc, QList<cv::Rect> lstcvrSearchRoi)
+{
+	bool bIsInSearch = false;
 
+	cv::Point cvpiLoc;
+	cvpiLoc.x = cvpMatchLoc.x;
+	cvpiLoc.y = cvpMatchLoc.y;
+	for (const auto& search : lstcvrSearchRoi)
+	{
+		if (search.contains(cvpiLoc))
+		{
+			bIsInSearch = true;
+			break;
+		}
+	}
+	return bIsInSearch;
+}
+
+std::vector<double> CommonTool_NormalTool::getCurvature(const std::vector<cv::Point>& veccvpiContourPoints, int iStep)
+{
+	std::vector<double> vecdCurvature(veccvpiContourPoints.size());
+
+	if (veccvpiContourPoints.size() < iStep)
+		return vecdCurvature;
+
+	auto frontToBack = veccvpiContourPoints.front() - veccvpiContourPoints.back();
+
+	bool isClosed = ((int)max(std::abs(frontToBack.x), std::abs(frontToBack.y))) <= 1;
+
+	cv::Point2f cvpfPlus, cvpfMinus;
+	cv::Point2f f1stDerivative, f2ndDerivative;
+	for (int iIdx = 0; iIdx < veccvpiContourPoints.size(); iIdx++)
+	{
+		const cv::Point2f& cvpfPos = veccvpiContourPoints[iIdx];
+
+		int iMaxStep = iStep;
+		if (!isClosed)
+		{
+			iMaxStep = min(min(iStep, iIdx), (int)veccvpiContourPoints.size() - 1 - iIdx);
+			if (iMaxStep == 0)
+			{
+				vecdCurvature[iIdx] = std::numeric_limits<double>::infinity();
+				continue;
+			}
+		}
+
+		int iMinus = iIdx - iMaxStep;
+		int iPlus = iIdx + iMaxStep;
+		cvpfMinus = veccvpiContourPoints[iMinus < 0 ? iMinus + veccvpiContourPoints.size() : iMinus];
+		cvpfPlus = veccvpiContourPoints[iPlus > veccvpiContourPoints.size() ? iPlus - veccvpiContourPoints.size() : iPlus];
+
+
+		f1stDerivative.x = (cvpfPlus.x - cvpfMinus.x) / (iPlus - iMinus);
+		f1stDerivative.y = (cvpfPlus.y - cvpfMinus.y) / (iPlus - iMinus);
+		f2ndDerivative.x = (cvpfPlus.x - 2 * cvpfPos.x + cvpfMinus.x) / ((iPlus - iMinus) / 2 * (iPlus - iMinus) / 2);
+		f2ndDerivative.y = (cvpfPlus.y - 2 * cvpfPos.y + cvpfMinus.y) / ((iPlus - iMinus) / 2 * (iPlus - iMinus) / 2);
+
+		double dCurvature2D = 0;
+		double dDivisor = f1stDerivative.x * f1stDerivative.x + f1stDerivative.y * f1stDerivative.y;
+		if (std::abs(dDivisor) > 10e-8)
+		{
+			dCurvature2D = std::abs(f2ndDerivative.y * f1stDerivative.x - f2ndDerivative.x * f1stDerivative.y) /
+				pow(dDivisor, 3.0 / 2.0);
+		}
+		else
+		{
+			dCurvature2D = std::numeric_limits<double>::infinity();
+		}
+
+		vecdCurvature[iIdx] = dCurvature2D;
+	}
+	return vecdCurvature;
+}

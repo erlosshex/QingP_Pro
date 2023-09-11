@@ -30,6 +30,9 @@
     <Filter Include="Source Files\common">
       <UniqueIdentifier>{ea2147b0-934c-48ee-89e7-d6ef8b031d10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\match">
+      <UniqueIdentifier>{3cf63114-105a-4f15-b153-31386370090e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm_operator_global.h">
@@ -76,6 +79,24 @@
     <ClCompile Include="source\find_edge\RansacAlgorithm.cpp">
       <Filter>Source Files\find_edge</Filter>
     </ClCompile>
+    <ClCompile Include="source\match\FindTemplateByGrayHisto.cpp">
+      <Filter>Source Files\match</Filter>
+    </ClCompile>
+    <ClCompile Include="source\match\FindTemplateByHalconNcc.cpp">
+      <Filter>Source Files\match</Filter>
+    </ClCompile>
+    <ClCompile Include="source\match\FindTemplateByHalconShape.cpp">
+      <Filter>Source Files\match</Filter>
+    </ClCompile>
+    <ClCompile Include="source\match\FindTemplateByOpenCV.cpp">
+      <Filter>Source Files\match</Filter>
+    </ClCompile>
+    <ClCompile Include="source\match\FindTemplateByOpenCVMultiAngle.cpp">
+      <Filter>Source Files\match</Filter>
+    </ClCompile>
+    <ClCompile Include="source\match\FindTemplateByTwoLines.cpp">
+      <Filter>Source Files\match</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="source\blob\common_blob_inspect.h">
@@ -95,6 +116,24 @@
     </QtMoc>
     <QtMoc Include="source\find_edge\FindEdge.h">
       <Filter>Source Files\find_edge</Filter>
+    </QtMoc>
+    <QtMoc Include="source\match\FindTemplateByOpenCV.h">
+      <Filter>Source Files\match</Filter>
+    </QtMoc>
+    <QtMoc Include="source\match\FindTemplateByOpenCVMultiAngle.h">
+      <Filter>Source Files\match</Filter>
+    </QtMoc>
+    <QtMoc Include="source\match\FindTemplateByTwoLines.h">
+      <Filter>Source Files\match</Filter>
+    </QtMoc>
+    <QtMoc Include="source\match\FindTemplateByGrayHisto.h">
+      <Filter>Source Files\match</Filter>
+    </QtMoc>
+    <QtMoc Include="source\match\FindTemplateByHalconNcc.h">
+      <Filter>Source Files\match</Filter>
+    </QtMoc>
+    <QtMoc Include="source\match\FindTemplateByHalconShape.h">
+      <Filter>Source Files\match</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>
