@@ -35,6 +35,27 @@ public:
     /// <returns>返回初始化状态</returns>
     virtual uint getCaptureImage(CameraCommonStruct::CameraCaptureFrame& stCaptureImage);
 
+    /// <summary>
+    /// 获取采集的图像
+    /// </summary>
+    /// <param name="stCaptureImage">获取的采集图像信息，指针</param>
+    /// <returns>返回初始化状态</returns>
+    virtual uint getCaptureImage(CameraCommonStruct::CameraCaptureFrame* pstCaptureImage);
+
+    /// <summary>
+    /// 获取采集的图像列表
+    /// </summary>
+    /// <param name="lststCaptureImage">获取的采集图像信息</param>
+    /// <returns>返回初始化状态</returns>
+    virtual uint getCaptureImageList(QList<CameraCommonStruct::CameraCaptureFrame>& lststCaptureImage);
+
+    /// <summary>
+    /// 获取采集的图像
+    /// </summary>
+    /// <param name="lstpstCaptureImage">获取的采集图像信息，指针</param>
+    /// <returns>返回初始化状态</returns>
+    virtual uint getCaptureImageList(QList<CameraCommonStruct::CameraCaptureFrame*>& lstpstCaptureImage);
+
 protected:
     CameraCommonEnum::CameraCaptureType m_eCaptureType = CameraCommonEnum::CameraCaptureType::DefaultMode;
     CameraCommonEnum::CameraFrameType m_eCaptureImageType = CameraCommonEnum::CameraFrameType::DefaultMode;

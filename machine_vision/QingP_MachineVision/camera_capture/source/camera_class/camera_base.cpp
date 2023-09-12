@@ -1,7 +1,7 @@
 #include "camera_base.h"
 
 CameraBase::CameraBase(CameraCommonEnum::CameraCaptureType eCaptureType, CameraCommonEnum::CameraFrameType eImageType) : \
-	m_eCaptureType(eCaptureType), m_eCaptureImageType(eImageType)
+m_eCaptureType(eCaptureType), m_eCaptureImageType(eImageType)
 {
 
 }
@@ -26,4 +26,18 @@ uint CameraBase::getCaptureImage(CameraCommonStruct::CameraCaptureFrame& stCaptu
 	return uint();
 }
 
+uint CameraBase::getCaptureImage(CameraCommonStruct::CameraCaptureFrame* pstCaptureImage)
+{
+	return uint();
+}
+
+uint CameraBase::getCaptureImageList(QList<CameraCommonStruct::CameraCaptureFrame>& lststCaptureImage)
+{
+	return uint();
+}
+
+uint CameraBase::getCaptureImageList(QList<CameraCommonStruct::CameraCaptureFrame*>& lstpstCaptureImage)
+{
+	return uint();
+}
 
