@@ -24,7 +24,7 @@ int main()
     //函数库的初始化
     glfwInit();
 
-    //设定opengl版本3.3
+    //设定opengl版本4.6
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
 
