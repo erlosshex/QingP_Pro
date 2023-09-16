@@ -13,10 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\standard_use">
+      <UniqueIdentifier>{629ea6db-21f4-4d85-a4e8-256d87b33848}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test_log4cplus.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="standard_use.cpp">
+      <Filter>源文件\standard_use</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="standard_use.h">
+      <Filter>源文件\standard_use</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

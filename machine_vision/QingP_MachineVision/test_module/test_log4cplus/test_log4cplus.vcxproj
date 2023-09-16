@@ -141,7 +141,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="standard_use.cpp" />
     <ClCompile Include="test_log4cplus.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="standard_use.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
