@@ -5,6 +5,9 @@ using namespace log4cplus::helpers;
 
 void standard_use()
 {
+	// step 0 : initializer
+	Initializer clsInitializer;
+
 	// step 1 : instantiate an appender object
 	SharedObjectPtr<Appender> spAppend(new ConsoleAppender());
 	spAppend->setName(LOG4CPLUS_C_STR_TO_TSTRING("append for test"));
