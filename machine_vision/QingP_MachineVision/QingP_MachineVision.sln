@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_opengl_environment", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_log4cplus", "test_module\test_log4cplus\test_log4cplus.vcxproj", "{5612F967-158A-4248-B92F-ADF0E0FFB5B2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "communication_tool", "communication_tool\communication_tool.vcxproj", "{21FE405F-3724-4153-9CBB-AB84D5F039F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -125,6 +127,12 @@ Global
 		{5612F967-158A-4248-B92F-ADF0E0FFB5B2}.Release|x64.Build.0 = Release|x64
 		{5612F967-158A-4248-B92F-ADF0E0FFB5B2}.Release|x86.ActiveCfg = Release|Win32
 		{5612F967-158A-4248-B92F-ADF0E0FFB5B2}.Release|x86.Build.0 = Release|Win32
+		{21FE405F-3724-4153-9CBB-AB84D5F039F0}.Debug|x64.ActiveCfg = Debug|x64
+		{21FE405F-3724-4153-9CBB-AB84D5F039F0}.Debug|x64.Build.0 = Debug|x64
+		{21FE405F-3724-4153-9CBB-AB84D5F039F0}.Debug|x86.ActiveCfg = Debug|x64
+		{21FE405F-3724-4153-9CBB-AB84D5F039F0}.Release|x64.ActiveCfg = Release|x64
+		{21FE405F-3724-4153-9CBB-AB84D5F039F0}.Release|x64.Build.0 = Release|x64
+		{21FE405F-3724-4153-9CBB-AB84D5F039F0}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
