@@ -21,6 +21,12 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{d48af907-7cea-4837-a220-f529ee37c8d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simple_tcp_communication">
+      <UniqueIdentifier>{14df7ae1-ebb8-48cf-b87a-1669aa64432e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="communication_tool_global.h">
@@ -32,6 +38,30 @@
     <ClCompile Include="communication_tool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
+    <ClInclude Include="source\communication_common\communication_common_define.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\communication_common\communication_common_enum.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="source\communication_common\communication_common_struct.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\simple_tcp_communication\simple_tcp_client.cpp">
+      <Filter>Source Files\simple_tcp_communication</Filter>
+    </ClCompile>
+    <ClCompile Include="source\simple_tcp_communication\simple_tcp_server.cpp">
+      <Filter>Source Files\simple_tcp_communication</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="source\simple_tcp_communication\simple_tcp_client.h">
+      <Filter>Source Files\simple_tcp_communication</Filter>
+    </QtMoc>
+    <QtMoc Include="source\simple_tcp_communication\simple_tcp_server.h">
+      <Filter>Source Files\simple_tcp_communication</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
