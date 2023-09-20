@@ -16,11 +16,18 @@ public:
 
     uint getClientID();
     QString getClientName();
+
     QString getServerIP();
     quint16 getServerPort();
+    void getServerInfo(QString& strServerIP, quint16& ui16ServerPort);
 
     void setServerIP(QString strServerIP);
     void setServerPort(quint16 ui16ServerPort);
+    void setServerInfo(QString strServerIP, quint16 ui16ServerPort);
+
+    void connectServer();
+
+    void sendMessage(QString strMessage);
 
 private:
     uint m_uiClientID = 0;

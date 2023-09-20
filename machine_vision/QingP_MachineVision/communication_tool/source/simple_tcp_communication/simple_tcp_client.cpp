@@ -37,6 +37,39 @@ quint16 SimpleTcpClient::getServerPort()
 	return m_ui16ServerPort;
 }
 
+void SimpleTcpClient::getServerInfo(QString& strServerIP, quint16& ui16ServerPort)
+{
+	strServerIP = getServerIP();
+	ui16ServerPort = getServerPort();
+}
+
+void SimpleTcpClient::setServerIP(QString strServerIP)
+{
+	m_strServerIP = strServerIP;
+}
+
+void SimpleTcpClient::setServerPort(quint16 ui16ServerPort)
+{
+	m_ui16ServerPort = ui16ServerPort;
+}
+
+void SimpleTcpClient::setServerInfo(QString strServerIP, quint16 ui16ServerPort)
+{
+	setServerIP(strServerIP);
+	setServerPort(ui16ServerPort);
+}
+
+void SimpleTcpClient::connectServer()
+{
+	connectToHost(m_strServerIP, m_ui16ServerPort);
+}
+
+void SimpleTcpClient::sendMessage(QString strMessage)
+{
+	QByteArray baMessage = strMessage.toUtf8();
+	write(baMessage);
+}
+
 void SimpleTcpClient::slot_clientReadData()
 {
 	QThread::msleep(100);
