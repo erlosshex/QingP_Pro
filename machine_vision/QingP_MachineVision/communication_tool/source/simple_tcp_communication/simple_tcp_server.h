@@ -8,12 +8,17 @@
 #include <QThread>
 #include <QList>
 
-#include "simple_tcp_client.h"
-
 class COMMUNICATION_TOOL_EXPORT SimpleTcpServer: public QTcpSocket
 {
     Q_OBJECT
 public:
+    struct SimpleTcpClientInfo
+    {
+        QString strClientIP = "";
+        QString strClientName = "";
+        uint uiClientID = 0;
+    };
+
     SimpleTcpServer(uint uiServerID = 0, QString strServerName = "", QObject* parent = nullptr);
     ~SimpleTcpServer();
 
@@ -22,7 +27,7 @@ private:
     QString m_strServerName = "";
 
     int m_iClientCount = 0;
-    QList<SimpleTcpClient*> m_lstpclsClientList;
+    QList<SimpleTcpClientInfo> m_lstpclsClientInfo;
     
 signals:
     
