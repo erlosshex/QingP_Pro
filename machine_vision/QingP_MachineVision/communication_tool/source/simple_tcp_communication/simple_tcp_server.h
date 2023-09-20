@@ -3,12 +3,13 @@
 
 #include "../../../communication_tool_global.h"
 
+#include <QTcpServer>
 #include <QTcpSocket>
 #include <QString>
 #include <QThread>
 #include <QList>
 
-class COMMUNICATION_TOOL_EXPORT SimpleTcpServer: public QTcpSocket
+class COMMUNICATION_TOOL_EXPORT SimpleTcpServer: public QTcpServer
 {
     Q_OBJECT
 public:
