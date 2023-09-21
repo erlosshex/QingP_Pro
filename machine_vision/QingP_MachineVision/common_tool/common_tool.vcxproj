@@ -97,6 +97,7 @@
     <ClCompile Include="source\convert_image\ConvertImage.cpp" />
     <ClCompile Include="source\file_operator\FileOperator.cpp" />
     <ClCompile Include="source\normal_tool\NormalTool.cpp" />
+    <ClCompile Include="source\settings\ini_file.cpp" />
     <ClInclude Include="common_tool_global.h" />
     <QtMoc Include="source\file_operator\FileOperator.h" />
     <QtMoc Include="source\convert_image\ConvertImage.h" />
@@ -106,6 +107,7 @@
     <QtMoc Include="source\common_transform\CommonAffineOperator.h" />
     <QtMoc Include="source\common_transform\CvAffineTransform.h" />
     <QtMoc Include="source\common_measure\OneDimensionMeasure.h" />
+    <QtMoc Include="source\settings\ini_file.h" />
     <ClInclude Include="source\tool_common\tool_common_define.h" />
     <ClInclude Include="source\tool_common\tool_common_enum.h" />
     <ClInclude Include="source\tool_common\tool_common_struct.h" />

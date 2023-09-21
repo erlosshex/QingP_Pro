@@ -42,6 +42,9 @@
     <Filter Include="Source Files\common_measure">
       <UniqueIdentifier>{9fc9706b-4436-4f37-8ec7-0dd0b1ec50b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\settings">
+      <UniqueIdentifier>{a9dd003f-5c95-45b8-ba5c-ed95a9b08386}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_tool_global.h">
@@ -88,6 +91,9 @@
     <ClCompile Include="source\common_measure\OneDimensionMeasure.cpp">
       <Filter>Source Files\common_measure</Filter>
     </ClCompile>
+    <ClCompile Include="source\settings\ini_file.cpp">
+      <Filter>Source Files\settings</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="source\file_operator\FileOperator.h">
@@ -113,6 +119,9 @@
     </QtMoc>
     <QtMoc Include="source\common_measure\OneDimensionMeasure.h">
       <Filter>Source Files\common_measure</Filter>
+    </QtMoc>
+    <QtMoc Include="source\settings\ini_file.h">
+      <Filter>Source Files\settings</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

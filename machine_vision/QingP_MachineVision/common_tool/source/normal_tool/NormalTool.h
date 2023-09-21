@@ -16,6 +16,14 @@ class COMMON_TOOL_EXPORT CommonTool_NormalTool : public QObject
 public:
 
 	/// <summary>
+	/// 将指针变量所指向的内存释放
+	/// </summary>
+	/// <typeparam name="T">泛型类别</typeparam>
+	/// <param name="ptrData">指针变量</param>
+	template<typename T>
+	static void deleteDataPtr(T*& pData);
+
+	/// <summary>
 	/// 由OpenCV的Rect生成Halcon正矩形区域
 	/// </summary>
 	/// <param name="cvrRoi">OpenCV的Rect</param>
@@ -219,5 +227,20 @@ public:
 	static std::vector<double> getCurvature(const std::vector<cv::Point>& veccvpiContourPoints, int iStep);
 
 };
+
+template<typename T>
+inline void deleteDataPtr(T*& pData)
+{
+	try
+	{
+		if (pData == nullptr) return;
+		delete pData;
+		pData = nullptr;
+	}
+	catch (std::exception& ex)
+	{
+		// todo
+	}
+}
 
 #endif 
