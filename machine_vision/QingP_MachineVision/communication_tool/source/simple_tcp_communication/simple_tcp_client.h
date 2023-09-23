@@ -1,7 +1,7 @@
 ﻿#ifndef SIMPLE_TCP_CLIENT_H
 #define SIMPLE_TCP_CLIENT_H
 
-#include "../../../communication_tool_global.h"
+#include "../../communication_tool_global.h"
 
 #include <QTcpSocket>
 #include <QString>
