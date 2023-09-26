@@ -41,6 +41,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_simple_tcp_client", "t
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_simple_tcp_server", "test_module\test_simple_tcp_server\test_simple_tcp_server.vcxproj", "{C0B754DE-CCF9-4F76-9045-2F3087FB9590}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_pytorch_env", "test_module\test_pytorch_env\test_pytorch_env.vcxproj", "{BE7D2C80-03D4-4375-9FE1-A22BECD47957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -149,6 +151,12 @@ Global
 		{C0B754DE-CCF9-4F76-9045-2F3087FB9590}.Release|x64.ActiveCfg = Release|x64
 		{C0B754DE-CCF9-4F76-9045-2F3087FB9590}.Release|x64.Build.0 = Release|x64
 		{C0B754DE-CCF9-4F76-9045-2F3087FB9590}.Release|x86.ActiveCfg = Release|x64
+		{BE7D2C80-03D4-4375-9FE1-A22BECD47957}.Debug|x64.ActiveCfg = Debug|x64
+		{BE7D2C80-03D4-4375-9FE1-A22BECD47957}.Debug|x64.Build.0 = Debug|x64
+		{BE7D2C80-03D4-4375-9FE1-A22BECD47957}.Debug|x86.ActiveCfg = Debug|x64
+		{BE7D2C80-03D4-4375-9FE1-A22BECD47957}.Release|x64.ActiveCfg = Release|x64
+		{BE7D2C80-03D4-4375-9FE1-A22BECD47957}.Release|x64.Build.0 = Release|x64
+		{BE7D2C80-03D4-4375-9FE1-A22BECD47957}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,6 +170,7 @@ Global
 		{5612F967-158A-4248-B92F-ADF0E0FFB5B2} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
 		{F859F666-A343-4DD7-9F12-BB54F876AE74} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
 		{C0B754DE-CCF9-4F76-9045-2F3087FB9590} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
+		{BE7D2C80-03D4-4375-9FE1-A22BECD47957} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EF76439-4250-4568-A0ED-84FBC7B9BDC6}
