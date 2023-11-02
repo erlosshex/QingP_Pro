@@ -8,6 +8,6 @@
 #define CAMERA_UNINIT_FAIL      0x00020001  //相机断开事变
 
 #define CAMERA_CAPTURE_OK       0x00030000  //相机采集成功
-#define CAMERA_CAPTURE_FAIL     0x00030001  //相机采集失败
+#define CAMERA_CAPTURE_FAIL     0x00030001  //相机采集失败 
 
 #endif
