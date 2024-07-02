@@ -21,7 +21,19 @@ public:
 	/// <typeparam name="T">泛型类别</typeparam>
 	/// <param name="ptrData">指针变量</param>
 	template<typename T>
-	static void deleteDataPtr(T*& pData);
+	static void deleteDataPtr(T*& pData)
+	{
+		try
+		{
+			if (pData == nullptr) return;
+			delete pData;
+			pData = nullptr;
+		}
+		catch (std::exception& ex)
+		{
+			// todo
+		}
+	}
 
 	/// <summary>
 	/// 由OpenCV的Rect生成Halcon正矩形区域
@@ -228,19 +240,19 @@ public:
 
 };
 
-template<typename T>
-inline void deleteDataPtr(T*& pData)
-{
-	try
-	{
-		if (pData == nullptr) return;
-		delete pData;
-		pData = nullptr;
-	}
-	catch (std::exception& ex)
-	{
-		// todo
-	}
-}
+//template<typename T>
+//inline void deleteDataPtr(T*& pData)
+//{
+//	try
+//	{
+//		if (pData == nullptr) return;
+//		delete pData;
+//		pData = nullptr;
+//	}
+//	catch (std::exception& ex)
+//	{
+//		// todo
+//	}
+//}
 
 #endif 

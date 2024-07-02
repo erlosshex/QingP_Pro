@@ -1,4 +1,4 @@
-#include "simple_tcp_server.h"
+ï»¿#include "simple_tcp_server.h"
 
 SimpleTcpServer::SimpleTcpServer(uint uiServerID, QString strServerName, QObject* parent) : QTcpServer(parent)
 {
@@ -53,7 +53,7 @@ void SimpleTcpServer::closeServer()
 {
 	for (int iIdx = 0; iIdx < m_lstpstClientInfo.size(); ++iIdx)
 	{
-		// ²»ÖªµÀÕâÀï²»ÊÍ·ÅÄÚ´æ»á²»»áÐ¹Â¶£¬µ«ÕâÀïµÄÄÚ´æ²»ÊÇÊÖ¶¯ÉêÇëµÄ£¬ÊÇÍ¨¹ýServerÁ¬½Ó×Ô¶¯»ñÈ¡µÄ
+		// ä¸çŸ¥é“è¿™é‡Œä¸é‡Šæ”¾å†…å­˜ä¼šä¸ä¼šæ³„éœ²ï¼Œä½†è¿™é‡Œçš„å†…å­˜ä¸æ˜¯æ‰‹åŠ¨ç”³è¯·çš„ï¼Œæ˜¯é€šè¿‡Serverè¿žæŽ¥è‡ªåŠ¨èŽ·å–çš„
 		//delete m_lstpstClientInfo[iIdx]->pTcpSocket;
 		//m_lstpstClientInfo[iIdx]->pTcpSocket = nullptr;
 

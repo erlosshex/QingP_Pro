@@ -8,11 +8,21 @@ CommonTool_IniFile::CommonTool_IniFile()
 CommonTool_IniFile::~CommonTool_IniFile()
 {
 	CommonTool_NormalTool::deleteDataPtr(m_qsetptrIniFile);
+	//if (nullptr != m_qsetptrIniFile)
+	//{
+	//	delete m_qsetptrIniFile;
+	//	m_qsetptrIniFile = nullptr;
+	//}
 }
 
 void CommonTool_IniFile::open(const QString& iniFilePathname)
 {
 	CommonTool_NormalTool::deleteDataPtr(m_qsetptrIniFile);
+	//if (nullptr != m_qsetptrIniFile)
+	//{
+	//	delete m_qsetptrIniFile;
+	//	m_qsetptrIniFile = nullptr;
+	//}
 
 	m_qsetptrIniFile = new QSettings(iniFilePathname, QSettings::IniFormat);
 
