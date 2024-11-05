@@ -45,6 +45,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_pytorch_env", "test_mo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_pcl1121_environment", "test_module\test_pcl1121_environment\test_pcl1121_environment.vcxproj", "{ADDA5D03-E275-4F6C-B336-5CFBED009E5B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_thrust_cuda_v11.6", "test_module\test_thrust_cuda_v11.6\test_thrust_cuda_v11.6.vcxproj", "{D8005E59-763F-4D2E-87A6-F6259232F959}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_stereo_calibration_opencv", "example_module\example_stereo_calibration_opencv\example_stereo_calibration_opencv.vcxproj", "{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_stereo_match_opencv", "example_module\example_stereo_match_opencv\example_stereo_match_opencv.vcxproj", "{D16C0A18-0B46-4656-8AB2-19ABA31830DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -167,6 +173,30 @@ Global
 		{ADDA5D03-E275-4F6C-B336-5CFBED009E5B}.Release|x64.Build.0 = Release|x64
 		{ADDA5D03-E275-4F6C-B336-5CFBED009E5B}.Release|x86.ActiveCfg = Release|Win32
 		{ADDA5D03-E275-4F6C-B336-5CFBED009E5B}.Release|x86.Build.0 = Release|Win32
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Debug|x64.ActiveCfg = Debug|x64
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Debug|x64.Build.0 = Debug|x64
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Debug|x86.ActiveCfg = Debug|Win32
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Debug|x86.Build.0 = Debug|Win32
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Release|x64.ActiveCfg = Release|x64
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Release|x64.Build.0 = Release|x64
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Release|x86.ActiveCfg = Release|Win32
+		{D8005E59-763F-4D2E-87A6-F6259232F959}.Release|x86.Build.0 = Release|Win32
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Debug|x64.ActiveCfg = Debug|x64
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Debug|x64.Build.0 = Debug|x64
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Debug|x86.Build.0 = Debug|Win32
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Release|x64.ActiveCfg = Release|x64
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Release|x64.Build.0 = Release|x64
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Release|x86.ActiveCfg = Release|Win32
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB}.Release|x86.Build.0 = Release|Win32
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Debug|x64.ActiveCfg = Debug|x64
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Debug|x64.Build.0 = Debug|x64
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Debug|x86.ActiveCfg = Debug|Win32
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Debug|x86.Build.0 = Debug|Win32
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Release|x64.ActiveCfg = Release|x64
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Release|x64.Build.0 = Release|x64
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Release|x86.ActiveCfg = Release|Win32
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +212,9 @@ Global
 		{C0B754DE-CCF9-4F76-9045-2F3087FB9590} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
 		{BE7D2C80-03D4-4375-9FE1-A22BECD47957} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
 		{ADDA5D03-E275-4F6C-B336-5CFBED009E5B} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
+		{D8005E59-763F-4D2E-87A6-F6259232F959} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
+		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB} = {AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}
+		{D16C0A18-0B46-4656-8AB2-19ABA31830DD} = {AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EF76439-4250-4568-A0ED-84FBC7B9BDC6}
