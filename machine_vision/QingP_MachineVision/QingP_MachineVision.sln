@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_stereo_calibration_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_stereo_match_opencv", "example_module\example_stereo_match_opencv\example_stereo_match_opencv.vcxproj", "{D16C0A18-0B46-4656-8AB2-19ABA31830DD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "small_tool_hello_world", "small_tool\small_tool_hello_world\small_tool_hello_world.vcxproj", "{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -197,6 +199,12 @@ Global
 		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Release|x64.Build.0 = Release|x64
 		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Release|x86.ActiveCfg = Release|Win32
 		{D16C0A18-0B46-4656-8AB2-19ABA31830DD}.Release|x86.Build.0 = Release|Win32
+		{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2}.Debug|x64.ActiveCfg = Debug|x64
+		{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2}.Debug|x64.Build.0 = Debug|x64
+		{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2}.Debug|x86.ActiveCfg = Debug|x64
+		{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2}.Release|x64.ActiveCfg = Release|x64
+		{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2}.Release|x64.Build.0 = Release|x64
+		{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -215,6 +223,7 @@ Global
 		{D8005E59-763F-4D2E-87A6-F6259232F959} = {A46C1B3C-865F-491B-947C-A0F1E51EB565}
 		{C4205C17-4500-4D42-8EB1-1AF6EC9828CB} = {AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}
 		{D16C0A18-0B46-4656-8AB2-19ABA31830DD} = {AE7AD40C-F2FA-47F3-95DB-CE14924A2AF9}
+		{FD91BCA1-EE68-4EAE-82B8-B9F1CB62FBA2} = {FC99609E-616B-4FF4-B2D3-8D14088A6252}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EF76439-4250-4568-A0ED-84FBC7B9BDC6}
